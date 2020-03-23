@@ -15,7 +15,7 @@ float laserY;
 float laserWidth = 40;
 
 void setup() {
-	size(640, 480, P2D);
+  size(640, 480, P2D);
 
   bgImg = loadImage("img/bg.jpg");
   groundhogImg = loadImage("img/groundhog.png");
@@ -59,14 +59,12 @@ void draw() {
     laserSpeed += 2;
     laserSpeed %= (160-laserWidth);
     fill(255,0,0);
-    strokeWeight(10);
     rect(-laserSpeed-laserWidth+robotX+25, laserY-5, 40, 10, 5);
     
   //robot
     image(robotImg, robotX, ground+layer*robotY);
   
   //sun
-    noStroke();
     fill(255,255,0);
     circle(590,50,130);
     fill(253,184,19);
