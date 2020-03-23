@@ -15,14 +15,14 @@ float laserY;
 float laserWidth = 40;
 
 void setup() {
-  size(640, 480, P2D);
+	size(640, 480, P2D);
 
   bgImg = loadImage("img/bg.jpg");
   groundhogImg = loadImage("img/groundhog.png");
   lifeImg = loadImage("img/life.png");
   robotImg = loadImage("img/robot.png");
   soilImg = loadImage("img/soil.png");
-  soldierImg = loadImage("img/soldier.png");
+	soldierImg = loadImage("img/soldier.png");
 
   soldierX = -soldierWidth;
   soldierY = floor(random(0,4));
