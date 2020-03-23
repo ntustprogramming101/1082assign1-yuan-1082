@@ -43,6 +43,7 @@ void draw() {
   image(lifeImg,150,10);
   
   //grass
+    noStroke();
     fill(124,204,25);
     rect(0,145,640,15);
     
