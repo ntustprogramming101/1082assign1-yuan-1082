@@ -11,11 +11,10 @@ float soldierX, soldierY;
 float soldierWidth = 80;
 float robotX, robotY;
 float laserSpeed;
-float laserY; 
-float laserWidth = 40;
+float laserY;
 
 void setup() {
-  size(640, 480, P2D);
+	size(640, 480, P2D);
 
   bgImg = loadImage("img/bg.jpg");
   groundhogImg = loadImage("img/groundhog.png");
@@ -25,7 +24,7 @@ void setup() {
 	soldierImg = loadImage("img/soldier.png");
 
   soldierX = -soldierWidth;
-  soldierY = floor(random(0,4));
+  soldierY = layer*floor(random(2,6));
  
   robotX = floor(random(160,560));
   robotY = floor(random(0,4));
@@ -53,13 +52,13 @@ void draw() {
   //soldier
     soldierX += 3;
     soldierX %= -720;
-    image(soldierImg, soldierX-soldierWidth, ground+layer*soldierY);
+    image(soldierImg, soldierX-soldierWidth, soldierY);
     
   //laser
     laserSpeed += 2;
-    laserSpeed %= (160-laserWidth);
+    laserSpeed %= 160;
     fill(255,0,0);
-    rect(-laserSpeed-laserWidth+robotX+25, laserY-5, 40, 10, 5);
+    rect(-laserSpeed+robotX+25, laserY-5, 40, 10, 5);
     
   //robot
     image(robotImg, robotX, ground+layer*robotY);
