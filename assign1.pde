@@ -12,6 +12,7 @@ float robotX, robotY;
 float laserX1, laserX2;
 float laserY;
 float laserSpeed = 2;
+float laserWidth = 40;
 
 void setup() {
   size(640, 480, P2D);
@@ -59,7 +60,7 @@ void draw() {
   image(robotImg, robotX, robotY);
     
   //laser shoot
-  if(laserX2 - laserX1 < 40){
+  if(laserX2 - laserX1 < laserWidth-10){
     laserX2 -= 0;
     }else{
       laserX2 -= laserSpeed;
