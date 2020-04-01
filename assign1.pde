@@ -67,8 +67,6 @@ void draw() {
   //laser restart
   if(robotX - laserX1 >= layer*2-5){
     laserX1 = robotX+25; 
-  }
-  if(laserX1 == robotX+25){
     laserX2 = robotX+25;
   }
 
