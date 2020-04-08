@@ -60,7 +60,7 @@ void draw() {
   image(robotImg, robotX, robotY);
     
   //laser shoot
-  if(laserX2 - laserX1 < laserWidth-10){
+  if(laserX2 - laserX1 < laserWidth){
     laserX2 -= 0;
     }else{
       laserX2 -= laserSpeed;
